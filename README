@@ -1,0 +1,18 @@
+﻿CURL – Crawling Using Reinforcement Learning
+
+Reinforcement Learning involves an agent(in this case the robot) interacting with the environment, getting positive or negative rewards(also known as punishments) for its actions and learning to maximise its rewards.
+
+In case of the crawler robot the states are the position of its arm and hand. Actions available are moving the arm up or down and moving the hand left or right.The rewards are given as follows: if the robot moves near the wall i.e. the distance from the wall decreases by 4 cm or more it receives a reward of +1. When the robot moves away from the wall by 4 cm or more it receives a reward of -2. Also, if the robot stays in a particular state without moving it receives a reward of -2. 
+
+How CURL Robot works?
+In this project we used an algorithm known as Q- learning which comes under Reinforcement Learning. Instead of calculating values and policies individually, it finds out q values of each possible action when in a particular state. And performs actions in each state depending on the q values.
+
+We used Raspberry Pi 3 as the controller, servo motors for the arm movements and ultrasonic sensor for distance measurement. Initially, it observes its current positions of the hand, arm and distance from wall. It then calculates the values of each state it could take and consequences it would face. And finally reaches to a conclusion of a best policy or sequence of actions it could take. 
+
+
+
+
+In the experiment performed on CURL robot, when it learned to move towards the wall, it figured out when its arm was down and hand moved initially to the left and then to the right it was getting rewards. Even though this wasn't the perfect way to move towards the wall. The perfect sequence of actions to be taken was move arm up, move hand left, move arm down, move hand right. But as the actions it learned to perform gave it results it started performing the same actions repeatedly until it reached the wall.
+
+
+
